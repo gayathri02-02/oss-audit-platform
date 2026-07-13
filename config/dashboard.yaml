@@ -1,0 +1,25 @@
+dashboard:
+
+  title: OSS Audit Dashboard
+
+  refresh_interval: 300
+
+  show_trends: true
+
+  show_cbom: true
+
+  show_sbom: true
+
+  show_reports: true
+
+charts:
+
+  compliance: true
+
+  licenses: true
+
+  vulnerabilities: true
+
+  cryptography: true
+
+  trends: true
