@@ -15,10 +15,19 @@ class SaveReport:
 
     def save(self, project_name, source_file):
 
-        destination = self.storage / project_name
+        from datetime import datetime
 
-        destination.mkdir(parents=True, exist_ok=True)
+today = datetime.now().strftime("%Y-%m-%d")
 
-        shutil.copy2(source_file, destination)
+history = self.storage / project_name / today
+latest = self.storage / project_name / "latest"
+
+history.mkdir(parents=True, exist_ok=True)
+latest.mkdir(parents=True, exist_ok=True)
+
+filename = Path(source_file).name
+
+shutil.copy2(source_file, history / filename)
+shutil.copy2(source_file, latest / filename)
 
         print(f"Report saved -> {destination}")
