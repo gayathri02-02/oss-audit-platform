@@ -34,6 +34,7 @@ class Orchestrator:
             print(f"\nExecuting {phase}")
 
             success = self.workflow.execute(phase)
+            print(f"Completed : {phase}")
 
             if not success:
                 print(f"\nPipeline Failed at {phase}")
