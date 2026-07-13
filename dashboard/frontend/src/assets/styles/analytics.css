@@ -1,0 +1,53 @@
+.analytics-page {
+
+    padding: 10px;
+
+}
+
+.analytics-page h2 {
+
+    color: #1E3A8A;
+
+    margin-bottom: 8px;
+
+}
+
+.analytics-page p {
+
+    color: #6B7280;
+
+    margin-bottom: 30px;
+
+}
+
+.analytics-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+.analytics-grid .chart-card:last-child {
+
+    grid-column: span 2;
+
+}
+
+@media (max-width: 900px) {
+
+    .analytics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .analytics-grid .chart-card:last-child {
+
+        grid-column: span 1;
+
+    }
+
+}
