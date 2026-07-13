@@ -1,0 +1,15 @@
+Generate an Executive Summary for an OSS Audit Report.
+
+The summary should:
+
+• Describe the project audit.
+• Summarize the SBOM.
+• Summarize the CBOM.
+• Mention major compliance observations.
+• Mention major security observations.
+• Highlight important risks.
+• Be understandable by senior management.
+• Keep the summary within 250 words.
+• Do not invent information.
+
+Return only the executive summary.
