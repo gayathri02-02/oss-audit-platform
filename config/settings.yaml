@@ -18,6 +18,14 @@ scheduler:
 
 storage:
 
+  history: true
+
+  keep_latest: true
+
+  latest_folder: latest
+
+  date_format: "%Y-%m-%d"
+
   sbom: storage/sboms
 
   cbom: storage/cboms
