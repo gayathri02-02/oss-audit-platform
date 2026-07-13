@@ -1,0 +1,123 @@
+.sbom-page {
+
+    padding: 10px;
+
+}
+
+.page-header h2 {
+
+    color: #1E3A8A;
+
+    margin-bottom: 8px;
+
+}
+
+.page-header p {
+
+    color: #6B7280;
+
+    margin-bottom: 25px;
+
+}
+
+.search-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: white;
+
+    width: 350px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+
+    margin-bottom: 25px;
+
+}
+
+.search-container input {
+
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 15px;
+
+}
+
+.sbom-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.sbom-table th {
+
+    background: #1E3A8A;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+}
+
+.sbom-table td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+}
+
+.sbom-table tr:hover {
+
+    background: #F8FAFC;
+
+}
+
+.action-btn {
+
+    border: none;
+
+    background: #EEF2FF;
+
+    color: #1E3A8A;
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-right: 8px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+.action-btn:hover {
+
+    background: #DBEAFE;
+
+}
