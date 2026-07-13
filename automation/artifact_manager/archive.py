@@ -17,7 +17,7 @@ class Archive:
 
     def archive_project(self, project_name):
 
-        project_folder = Path("storage") / project_name
+        project_folder = Path("storage") / "reports" / project_name
 
         if not project_folder.exists():
             return
