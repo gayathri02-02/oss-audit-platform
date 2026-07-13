@@ -7,10 +7,14 @@ REST API routes for the OSS Audit Platform Dashboard.
 from flask import Blueprint
 from flask import jsonify
 
+from services import DashboardService
+
 dashboard_routes = Blueprint(
     "dashboard",
     __name__
 )
+
+service = DashboardService()
 
 
 #
@@ -23,19 +27,9 @@ dashboard_routes = Blueprint(
 )
 def dashboard():
 
-    return jsonify({
-
-        "projects": 0,
-
-        "sboms": 0,
-
-        "cboms": 0,
-
-        "reports": 0,
-
-        "compliance": 0
-
-    })
+    return jsonify(
+        service.get_dashboard_summary()
+    )
 
 
 #
@@ -48,7 +42,9 @@ def dashboard():
 )
 def projects():
 
-    return jsonify([])
+    return jsonify(
+        service.get_projects()
+    )
 
 
 #
@@ -61,7 +57,9 @@ def projects():
 )
 def sboms():
 
-    return jsonify([])
+    return jsonify(
+        service.get_sboms()
+    )
 
 
 #
@@ -74,7 +72,9 @@ def sboms():
 )
 def cboms():
 
-    return jsonify([])
+    return jsonify(
+        service.get_cboms()
+    )
 
 
 #
@@ -87,7 +87,9 @@ def cboms():
 )
 def reports():
 
-    return jsonify([])
+    return jsonify(
+        service.get_reports()
+    )
 
 
 #
@@ -100,12 +102,6 @@ def reports():
 )
 def analytics():
 
-    return jsonify({
-
-        "weekly": [],
-
-        "monthly": [],
-
-        "yearly": []
-
-    })
+    return jsonify(
+        service.get_analytics()
+    )
