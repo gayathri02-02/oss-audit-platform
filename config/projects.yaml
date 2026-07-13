@@ -1,0 +1,16 @@
+projects:
+
+  - name: project1
+    repo: https://github.com/gayathri02-02/project1.git
+    branch: main
+    enabled: true
+
+  - name: project2
+    repo: https://github.com/gayathri02-02/project2.git
+    branch: main
+    enabled: true
+
+  - name: project3
+    repo: https://github.com/gayathri02-02/project3.git
+    branch: main
+    enabled: true
