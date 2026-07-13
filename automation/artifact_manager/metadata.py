@@ -24,22 +24,16 @@ class Metadata:
                report,
                status):
 
-        data = {
-
-            "project": project_name,
-
-            "status": status,
-
-            "generated_on": datetime.now().isoformat(),
-
-            "sbom": sbom,
-
-            "cbom": cbom,
-
-            "report": report
-
-        }
-
+        today = datetime.now().strftime("%Y-%m-%d")
+                   data = {
+                       "project": project_name,
+                       "status": status,
+                       "generated_on": datetime.now().isoformat(),
+                       "scan_date": today,
+                       "sbom": sbom,
+                       "cbom": cbom,
+                       "report": report
+                       }
         output = self.metadata / f"{project_name}.json"
 
         with open(output, "w") as file:
