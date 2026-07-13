@@ -1,0 +1,48 @@
+name: Manual OSS Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: "Repository Name"
+        required: false
+        default: "all"
+
+jobs:
+  manual-scan:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Execute Manual Scan
+        run: |
+          python scripts/run_pipeline.py --repository "${{ github.event.inputs.repository }}"
+
+      - name: Commit Results
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+
+          git add storage/
+
+          git commit -m "Manual Scan Results" || echo "Nothing to commit"
+
+          git push
