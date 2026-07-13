@@ -1,0 +1,24 @@
+Generate remediation recommendations for an OSS Audit Report.
+
+Use the supplied SBOM and CBOM findings.
+
+Provide recommendations for:
+
+• License Compliance
+• Open Source Governance
+• Cryptographic Compliance
+• Security Best Practices
+• Dependency Management
+• CI/CD Improvements
+• Documentation Improvements
+• Future Compliance Activities
+
+Requirements:
+
+• Recommendations must be actionable.
+• Prioritize critical issues first.
+• Avoid generic advice.
+• Do not invent findings.
+• Base every recommendation on the supplied audit data.
+
+Return the recommendations as a numbered list.
