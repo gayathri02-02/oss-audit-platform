@@ -1,0 +1,33 @@
+scan:
+
+  output_directory: storage
+
+  temp_directory: temp
+
+  keep_old_reports: true
+
+  max_parallel_scans: 3
+
+scheduler:
+
+  timezone: UTC
+
+  weekly_day: friday
+
+  weekly_time: "02:00"
+
+storage:
+
+  sbom: storage/sboms
+
+  cbom: storage/cboms
+
+  reports: storage/reports
+
+  metadata: storage/metadata
+
+logging:
+
+  level: INFO
+
+  file: logs/pipeline.log
