@@ -10,7 +10,7 @@ Responsibilities:
 4. Handle failures
 5. Display execution status
 """
-
+from automation.notifier.notify_console import ConsoleNotifier
 from automation.orchestrator.pipeline import Pipeline
 from automation.orchestrator.workflow import Workflow
 
@@ -23,25 +23,21 @@ class Orchestrator:
 
     def run(self):
 
-        print("\n======================================")
-        print("      OSS Audit Pipeline Started")
-        print("======================================\n")
+        ConsoleNotifier.info("OSS Audit Pipeline Started")
 
         phases = self.pipeline.get_pipeline()
 
         for phase in phases:
 
-            print(f"\nExecuting {phase}")
+            ConsoleNotifier.info(f"Executing Phase : {phase}")
 
             success = self.workflow.execute(phase)
             print(f"Completed : {phase}")
 
             if not success:
-                print(f"\nPipeline Failed at {phase}")
+                ConsoleNotifier.error(f"Pipeline Failed : {phase}")
                 return False
 
-        print("\n======================================")
-        print(" OSS Audit Pipeline Completed")
-        print("======================================\n")
+        ConsoleNotifier.success("OSS Audit Pipeline Completed")
 
         return True
