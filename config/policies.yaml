@@ -1,0 +1,55 @@
+licenses:
+
+  allowed:
+
+    - MIT
+
+    - Apache-2.0
+
+    - BSD-2-Clause
+
+    - BSD-3-Clause
+
+  restricted:
+
+    - LGPL-2.1
+
+    - MPL-2.0
+
+  prohibited:
+
+    - GPL-2.0
+
+    - GPL-3.0
+
+crypto:
+
+  weak_algorithms:
+
+    - MD5
+
+    - SHA1
+
+    - DES
+
+  approved_algorithms:
+
+    - AES
+
+    - RSA
+
+    - ECC
+
+    - SHA256
+
+    - SHA384
+
+severity:
+
+  critical: 9
+
+  high: 7
+
+  medium: 4
+
+  low: 1
