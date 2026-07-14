@@ -34,7 +34,7 @@ jobs:
 
       - name: Execute Manual Scan
         run: |
-          python scripts/run_pipeline.py --repository "${{ github.event.inputs.repository }}"
+          python automation/orchestrator/orchestrator.py
 
       - name: Commit Results
         run: |
