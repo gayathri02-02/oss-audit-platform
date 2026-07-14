@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+
+  oss-audit-platform:
+
+    build: .
+
+    container_name: oss-audit-platform
+
+    restart: unless-stopped
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./config:/app/config
+      - ./storage:/app/storage
+      - ./logs:/app/logs
+
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    command: python dashboard/backend/app.py
