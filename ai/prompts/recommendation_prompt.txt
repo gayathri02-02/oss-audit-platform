@@ -3,7 +3,6 @@ Generate remediation recommendations for an OSS Audit Report.
 Use the supplied SBOM and CBOM findings.
 
 Provide recommendations for:
-
 • License Compliance
 • Open Source Governance
 • Cryptographic Compliance
